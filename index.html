@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eve craft overseas</title>
+    <style>
+        body {
+            background-color: rgb(246, 246, 246);
+            color: black;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 50px;
+            align-items: center;
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: rgb(107, 107, 107);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .nav-img {
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        main {
+            display: none;
+        }
+
+        main:target {
+            display: block;
+        }
+
+        .banner {
+            aspect-ratio: 3;
+            width: 100%;
+            background-image: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0) 0,
+                    rgba(0, 0, 0, 0.821) 100%), url(https://c.pxhere.com/photos/a3/6c/chair_living_room_indoor_decor_flat-181502.jpg!d);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .banner p {
+            color: white;
+            font-size: 27px;
+            font-weight: 300;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        button {
+            margin: 10px;
+        }
+
+        .categories a {
+            margin: 10px;
+            height: 50vh;
+            background-color: rgb(255, 255, 255);
+            color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .categories a:hover {
+            animation: slowBackgroundSize 20s linear;
+        }
+
+        @keyframes slowBackgroundSize {
+            from {
+                background-size: 140%;
+            }
+
+            to {
+                background-size: 300%;
+            }
+        }
+
+
+        .cat-crd {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 35vh;
+        }
+
+        hr {
+            border: .3px solid rgb(220, 220, 220);
+            margin: 0;
+        }
+
+        footer {
+            padding: 50px;
+            background-color: rgb(248, 248, 248);
+        }
+
+        .foot-logo {
+            height: 300px;
+            margin: -100px;
+        }
+
+        .foot-clmn {
+            max-width: 25%;
+        }
+
+        .foot-clmn ul {
+            list-style: none;
+        }
+
+        .foot-clmn ul li a {
+            color: rgb(108, 108, 108);
+        }
+
+        .hot-prod-img {
+            aspect-ratio: 1;
+            min-width: 45%;
+            margin: 0 20px;
+            background-color: rgb(216, 237, 255);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(https://s.alicdn.com/@sc04/kf/H4300a50029754c0186686d07c01fa7b7E.jpeg_960x960.jpeg);
+        }
+
+        .hot-prod {
+            display: flex;
+            padding-top: 100px;
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 20px;
+        }
+
+        .cat-crd {
+            background-image: ;
+        }
+
+        .prod-cat-img {
+            background-color: black;
+            width: 100%;
+            aspect-ratio: 1;
+        }
+
+        .prod-cat-img:hover {
+            background-color: grey;
+        }
+
+        .product-title {
+            text-align: center;
+            margin: 10px;
+            color: black;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sticky-header">
+        <header>
+            <nav>
+                <a href=""><img class="logo" src="assest/logo.png" alt=""></a>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#categories">CATEGORIES</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                </ul>
+            </nav>
+            <div></div>
+            <div>
+                <a href=""><img class="nav-img" src="assest/search.svg" alt=""></a>
+                <a href=""><img class="nav-img" src="assest/cart.svg" alt=""></a>
+            </div>
+        </header>
+        <hr>
+    </div>
+
+    <main id="home">
+
+        <a href="#products">
+            <div style="display: flex; align-items: center; justify-content: center;" class="banner">
+                <p>VIEW ALL PRODUCTS</p>
+            </div>
+        </a>
+
+        <div class="categories">
+            <a style="background-image:linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.821) 100%), url(https://s.alicdn.com/@sc04/kf/A719bc566b4a7494c98c4c7d22bb15423p.png_960x960.png); "
+                href="">
+                <div class="cat-crd">
+                    <p>FURNITURE</p>
+                    <button class="cat-btn">VIEW</button>
+                </div>
+            </a>
+            <a style="background-image:linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.821) 100%), url(https://s.alicdn.com/@sc04/kf/A3ee3c7f39cd94115a2799d82fc4c1919q.jpg_960x960.jpg);"
+                href="">
+                <div class="cat-crd">
+                    <p>TISSUE PAPER HOLDER</p>
+                    <button class="cat-btn">VIEW</button>
+                </div>
+            </a>
+            <a style="background-image:linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.821) 100%), url(https://s.alicdn.com/@sc04/kf/A4f1d59f8521d4d53b0b5b294eb10e1dfW.jpg_960x960.jpg);"
+                href="">
+                <div class="cat-crd">
+                    <p>HOME DECOR</p>
+                    <button class="cat-btn">VIEW</button>
+                </div>
+            </a>
+            <a style="background-image:linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.821) 100%),url(https://s.alicdn.com/@sc04/kf/A15300ce415234ce7a12a36ee0b8b3106T.jpg_960x960.jpg);"
+                href="">
+                <div class="cat-crd">
+                    <p>BATHROOM ACCESSORIES</p>
+                    <button class="cat-btn">VIEW</button>
+                </div>
+            </a>
+            <a style="background-image:linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.821) 100%),url(https://s.alicdn.com/@sc04/kf/A1e4f178ee2294d77a8c17b9f0952b156L.jpg_960x960.jpg);"
+                href="">
+                <div class="cat-crd">
+                    <p>CAKE HOLDER</p>
+                    <button class="cat-btn">VIEW</button>
+                </div>
+            </a>
+            <a style="background-image:linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.821) 100%),url(https://s.alicdn.com/@sc04/kf/A00e2bc31eeb842a1bacaeb56eff2fa82c.jpg_960x960.jpg);"
+                href="">
+                <div class="cat-crd">
+                    <p>NAPKIN HOLDER</p>
+                    <button class="cat-btn">VIEW</button>
+                </div>
+            </a>
+            <a style="background-image:linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.821) 100%),url(https://s.alicdn.com/@sc04/kf/A99fb042d1a5d4630bb652dd152cb5823D.jpg_960x960.jpg);"
+                href="">
+                <div class="cat-crd">
+                    <p>KITCHEN ACCESSORIES</p>
+                    <button class="cat-btn">VIEW</button>
+                </div>
+            </a>
+            <a style="background-image:linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.821) 100%),url(https://s.alicdn.com/@sc04/kf/A6e457dcdf76c4f889b1e08b8648d7c19q.jpg_960x960.jpg);"
+                href="">
+                <div class="cat-crd">
+                    <p>WOODEN TRAYS</p>
+                    <button class="cat-btn">VIEW</button>
+                </div>
+            </a>
+        </div>
+
+        <div class="hot-prod">
+            <div class="hot-prod-img"></div>
+            <div style="padding: 60px;">
+                <p style="font-size: 23px; font-weight: 300;">HOT PRODUCT</p>
+                <p style="font-size: 14px; color: rgb(113, 113, 113); line-height: 1.7;">Make everyday moments more
+                    memorable in the company of FirePits. This splendid addition to your surroundings is a signature
+                    piece.
+                    Lit or not lit, it is a décor piece that makes for a gorgeous addition to your environs. Ring in an
+                    unmatched and unusual vibe with a lit firepit and yummy food, where a gorgeous dancing flame adds
+                    the
+                    littlest of light to the night. Easy to set up, the little effort you put into it will set the mood
+                    just
+                    right for an aesthetic setup and good vibe. Style a Fire Pit in your bedroom, living room, home
+                    theatre,
+                    dining table, garden, balcony, rooftop, or wherever you like, and just light it up when you feel
+                    like
+                    it!</p>
+                <a style="text-decoration: underline; text-underline-offset: 5px; color: black;" href="">SHOP NOW</a>
+            </div>
+        </div>
+
+        <hr>
+        <div style="margin: auto; max-width: 1600px; display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center; font-size: 27px; font-weight: 300; ">CATEGORIES</p>
+
+            <div style="margin: 20px; display: grid; grid-template-columns: auto auto auto auto; gap: 20px;">
+                <div>
+                    <a href="">
+                        <style>
+                            .prod-one {
+                                background-image: url(https://m.media-amazon.com/images/I/51zhJLLMk5L._AC_UF1000,1000_QL80_.jpg);
+                                width: 100%;
+                                aspect-ratio: 1;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+
+                            .prod-one:hover {
+                                background-image: url(https://m.media-amazon.com/images/I/61YM-x9Q+yL._AC_UF894,1000_QL80_.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                transition: .1s;
+                            }
+                        </style>
+                        <div class="prod-one">
+                            <button>View</button>
+                        </div>
+                        <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                            PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                        <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                                1799.00</s></p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <style>
+                            .prod-three {
+                                background-image: url(https://i.pinimg.com/564x/7a/2e/33/7a2e33ad438d895056d9f5d2ef3ee871.jpg);
+                                width: 100%;
+                                aspect-ratio: 1;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+
+                            .prod-three:hover {
+                                background-image: url(https://images.beautifulhalo.com/images/v/201901/W/1546573503379.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                        </style>
+                        <div class="prod-three">
+                            <button>View</button>
+                        </div>
+                        <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                            PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                        <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                                1799.00</s></p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <style>
+                            .prod-three {
+                                background-image: url(https://i.pinimg.com/564x/7a/2e/33/7a2e33ad438d895056d9f5d2ef3ee871.jpg);
+                                width: 100%;
+                                aspect-ratio: 1;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+
+                            .prod-three:hover {
+                                background-image: url(https://images.beautifulhalo.com/images/v/201901/W/1546573503379.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                        </style>
+                        <div class="prod-three">
+                            <button>View</button>
+                        </div>
+                        <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                            PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                        <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                                1799.00</s></p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <style>
+                            .prod-two {
+                                background-image: url(https://greyt.in/cdn/shop/products/0X1A0188_e6eec0f5-6f0e-4b40-a50d-f14c5f7ced3b_800x.jpg);
+                                width: 100%;
+                                aspect-ratio: 1;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+
+                            .prod-two:hover {
+                                background-image: url(https://cdn.shopify.com/s/files/1/0601/9933/8171/products/0X1A0180_600x.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                        </style>
+                        <div class="prod-two">
+                            <button>View</button>
+                        </div>
+                        <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                            PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                        <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                                1799.00</s></p>
+                    </a>
+                </div>
+            </div>
+            <button style="width: max-content;">VIEW ALL</button>
+        </div>
+        <hr>
+        <div style="margin: auto; max-width: 1600px; display: flex; flex-direction: column; align-items: center;">
+            <p style="text-align: center; font-size: 27px; font-weight: 300;">CATEGORIES</p>
+
+            <div style="margin: 20px; display: grid; grid-template-columns: auto auto auto auto; gap: 20px;">
+                <div>
+                    <a href="">
+                        <style>
+                            .prod-one {
+                                background-image: url(https://m.media-amazon.com/images/I/51zhJLLMk5L._AC_UF1000,1000_QL80_.jpg);
+                                width: 100%;
+                                aspect-ratio: 1;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+
+                            .prod-one:hover {
+                                background-image: url(https://m.media-amazon.com/images/I/61YM-x9Q+yL._AC_UF894,1000_QL80_.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                transition: .1s;
+                            }
+                        </style>
+                        <div class="prod-one">
+                            <button>View</button>
+                        </div>
+                        <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                            PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                        <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                                1799.00</s></p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <style>
+                            .prod-three {
+                                background-image: url(https://i.pinimg.com/564x/7a/2e/33/7a2e33ad438d895056d9f5d2ef3ee871.jpg);
+                                width: 100%;
+                                aspect-ratio: 1;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+
+                            .prod-three:hover {
+                                background-image: url(https://images.beautifulhalo.com/images/v/201901/W/1546573503379.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                        </style>
+                        <div class="prod-three">
+                            <button>View</button>
+                        </div>
+                        <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                            PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                        <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                                1799.00</s></p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <style>
+                            .prod-three {
+                                background-image: url(https://i.pinimg.com/564x/7a/2e/33/7a2e33ad438d895056d9f5d2ef3ee871.jpg);
+                                width: 100%;
+                                aspect-ratio: 1;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+
+                            .prod-three:hover {
+                                background-image: url(https://images.beautifulhalo.com/images/v/201901/W/1546573503379.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                        </style>
+                        <div class="prod-three">
+                            <button>View</button>
+                        </div>
+                        <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                            PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                        <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                                1799.00</s></p>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <style>
+                            .prod-two {
+                                background-image: url(https://greyt.in/cdn/shop/products/0X1A0188_e6eec0f5-6f0e-4b40-a50d-f14c5f7ced3b_800x.jpg);
+                                width: 100%;
+                                aspect-ratio: 1;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+
+                            .prod-two:hover {
+                                background-image: url(https://cdn.shopify.com/s/files/1/0601/9933/8171/products/0X1A0180_600x.jpg);
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                        </style>
+                        <div class="prod-two">
+                            <button>View</button>
+                        </div>
+                        <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                            PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                        <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                                1799.00</s></p>
+                    </a>
+                </div>
+            </div>
+            <button style="width: max-content;">VIEW ALL</button>
+        </div>
+
+    </main>
+
+    <main id="categories">
+        <p style="text-align: center; font-size: 27px; font-weight: 200; padding: 30px;">CATEGORIES</p>
+        <div style="margin: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;" class="category-cards">
+        </div>
+
+        <script>const categoryData = [
+                {
+                    imageUrl: "https://imgmedia.lbb.in/media/2023/03/64269ee4c70b643ca53755fa_1680252644297.jpg",
+                    title: "ALL PRODUCTS",
+                    link: "#products",
+                },
+                {
+
+                    imageUrl: "https://s.alicdn.com/@sc04/kf/A719bc566b4a7494c98c4c7d22bb15423p.png_960x960.png",
+                    title: "FURNITURE",
+                    link: "#prod1",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc04/kf/A3ee3c7f39cd94115a2799d82fc4c1919q.jpg_960x960.jpg",
+                    title: "TISSUE PAPER HOLDER",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc04/kf/A4f1d59f8521d4d53b0b5b294eb10e1dfW.jpg_960x960.jpg",
+                    title: "HOME DECOR",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc04/kf/A15300ce415234ce7a12a36ee0b8b3106T.jpg_960x960.jpg",
+                    title: "BATHROOM ACCESSORIES",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc04/kf/A1e4f178ee2294d77a8c17b9f0952b156L.jpg_960x960.jpg",
+                    title: "CAKE HOLDER",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc04/kf/A00e2bc31eeb842a1bacaeb56eff2fa82c.jpg_960x960.jpg",
+                    title: "NAPKIN HOLDER",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc01/kf/Ae133e63b93354fff9795325db8567919y.png_480x480.png",
+                    title: "BUTTONS",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc04/kf/A99fb042d1a5d4630bb652dd152cb5823D.jpg_960x960.jpg",
+                    title: "KITCHEN ACCESSORIES",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc04/kf/A6e457dcdf76c4f889b1e08b8648d7c19q.jpg_960x960.jpg",
+                    title: "WOODEN TRAYS",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc01/kf/A67160de5de554e6d8193c008f41d60dcd.jpg_480x480.jpg",
+                    title: "WALL SHELF RACKS",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc01/kf/A0cca6941ddca45d8ab2915cb6ee0cec0B.jpg_480x480.jpg",
+                    title: "CERAMIC PLANTERS",
+                    link: "",
+                },
+                {
+                    imageUrl: "https://s.alicdn.com/@sc01/kf/Saefd411ed0be404bba5b398f852e11e7z.jpg_480x480.jpg",
+                    title: "PET ACCESSORIES",
+                    link: "",
+                },
+            ];
+
+            const categoryContainer = document.querySelector(".category-cards");
+
+            categoryData.forEach((data, index) => {
+                const card = document.createElement("div");
+                card.classList.add("cat-card");
+
+                // Add the linear-gradient background
+                card.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.821) 100%), url(${data.imageUrl})`;
+                card.style.backgroundSize = "cover";
+                card.style.backgroundPosition = "center";
+                card.style.backgroundRepeat = "no-repeat";
+                card.style.height = "50vh";
+                card.style.padding = "20px";
+                card.style.display = "flex";
+                card.style.alignItems = "flex-end";
+
+                const cardContent = document.createElement("p");
+                cardContent.style.display = "flex";
+                cardContent.style.flexDirection = "column";
+                cardContent.style.color = "white";
+                cardContent.style.fontSize = "27px";
+                cardContent.style.fontWeight = "300";
+
+                cardContent.innerHTML = `
+        ${data.title} <a href="${data.link}"><button>VIEW PRODUCTS</button></a>
+    `;
+
+                card.appendChild(cardContent);
+                categoryContainer.appendChild(card);
+            });
+        </script>
+    </main>
+    <main id="products">
+        <p style="text-align: center; font-size: 27px; font-weight: 200; padding: 30px;">PRODUCTS</p>
+        <div
+            style="display: flex; justify-content: space-between; border: .5px solid rgb(196, 196, 196);padding: 10px; margin-bottom: 60px;">
+            <div>
+            </div>
+            <div>
+                <a style="border: .5px solid rgb(196, 196, 196); padding: 10px 30px;" href="">SORT</a>
+                <a style="padding: 10px 30px;" href="">FILTER</a>
+            </div>
+        </div>
+
+        <div style="margin: 20px; display: grid; grid-template-columns: auto auto auto auto; gap: 20px;">
+            <div>
+                <a href="">
+                    <style>
+                        .prod-one {
+                            background-image: url(https://m.media-amazon.com/images/I/51zhJLLMk5L._AC_UF1000,1000_QL80_.jpg);
+                            width: 100%;
+                            aspect-ratio: 1;
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        .prod-one:hover {
+                            background-image: url(https://m.media-amazon.com/images/I/61YM-x9Q+yL._AC_UF894,1000_QL80_.jpg);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            transition: .1s;
+                        }
+                    </style>
+                    <div class="prod-one">
+                        <button>View</button>
+                    </div>
+                    <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                        PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                    <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                            1799.00</s></p>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <style>
+                        .prod-three {
+                            background-image: url(https://i.pinimg.com/564x/7a/2e/33/7a2e33ad438d895056d9f5d2ef3ee871.jpg);
+                            width: 100%;
+                            aspect-ratio: 1;
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        .prod-three:hover {
+                            background-image: url(https://images.beautifulhalo.com/images/v/201901/W/1546573503379.jpg);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+                    <div class="prod-three">
+                        <button>View</button>
+                    </div>
+                    <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                        PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                    <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                            1799.00</s></p>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <style>
+                        .prod-three {
+                            background-image: url(https://i.pinimg.com/564x/7a/2e/33/7a2e33ad438d895056d9f5d2ef3ee871.jpg);
+                            width: 100%;
+                            aspect-ratio: 1;
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        .prod-three:hover {
+                            background-image: url(https://images.beautifulhalo.com/images/v/201901/W/1546573503379.jpg);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+                    <div class="prod-three">
+                        <button>View</button>
+                    </div>
+                    <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                        PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                    <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                            1799.00</s></p>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <style>
+                        .prod-two {
+                            background-image: url(https://greyt.in/cdn/shop/products/0X1A0188_e6eec0f5-6f0e-4b40-a50d-f14c5f7ced3b_800x.jpg);
+                            width: 100%;
+                            aspect-ratio: 1;
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        .prod-two:hover {
+                            background-image: url(https://cdn.shopify.com/s/files/1/0601/9933/8171/products/0X1A0180_600x.jpg);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+                    <div class="prod-two">
+                        <button>View</button>
+                    </div>
+                    <p class="product-title">HEXO- NERO MARBLE - HEXAGONAL CONCRETE POT FOR SUCCULENTS & SMALL
+                        PLANTS PERFECT FOR OFFICE AND STUDY TABLE NO REVIEWS</p>
+                    <p style="text-align: center; color: black;">RS.499.00 <s style="color: rgb(170, 170, 170);">RS.
+                            1799.00</s></p>
+                </a>
+            </div>
+
+
+        </div>
+    </main>
+    <div id="product-pages">
+        <main id="prod1">
+            
+        </main>
+    </div>
+    <main id="about">About</main>
+
+
+
+    <hr>
+    <footer>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div class="foot-clmn">
+                <img class="foot-logo" src="assest/Eve.jpg" alt="">
+                <p>We focus on finest and pre-eminent designs handcasted in concrete with a sustainable approach. We
+                    intend
+                    to serve you with the products that are authentic yet feel luxurious</p>
+            </div>
+            <div class="foot-clmn">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="">link of</a></li>
+                    <li><a href="">link of</a></li>
+                    <li><a href="">link of</a></li>
+                    <li><a href="">link of</a></li>
+                    <li><a href="">link of</a></li>
+                </ul>
+            </div>
+            <div class="foot-clmn">
+                <h4>Social</h4>
+                <ul>
+                    <li><a href="">Social media</a></li>
+                    <li><a href="">Social media</a></li>
+                    <li><a href="">Social media</a></li>
+                    <li><a href="">Social media</a></li>
+                </ul>
+            </div>
+            <div class="foot-clmn">
+                <h4>Contact Us</h4>
+                <p>116, Bal Vihar, Kalwar Road Bypass, Jhotwara, Jaipur, Rajasthan 302012</p>
+                <p>user@admin.com</p>
+                <p>Whatsapp Us At +91 9650176982</p>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding-top: 10vh;">
+            <p>© Eve Crafts Overseas. ALL RIGHTS RESERVED</p>
+            <p>POWERED BY ©Blue Branch Inc. Iowa City, USA</p>
+        </div>
+    </footer>
+</body>
+
+</html>
